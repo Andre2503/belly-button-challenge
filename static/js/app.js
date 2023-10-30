@@ -40,11 +40,11 @@ d3.json(url).then(function(data) {
 
     //create a function for the bar chart
     function plotBarChart(sample) {
-        let x_values = sample.sample_values.slice(0,10); // access only the top ten sample_values
+        let x_values = sample.sample_values.slice(0,10).reverse(); // access only the top ten sample_values
         console.log(x_values);
-        let y_values = sample.otu_ids.slice(0,10); // access only the top ten otu_ids
+        let y_values = sample.otu_ids.slice(0,10).reverse(); // access only the top ten otu_ids
         console.log(y_values);
-        let labels = sample.otu_labels.slice(0,10);
+        let labels = sample.otu_labels.slice(0,10).reverse();
         console.log(labels)
 
         let trace = {
